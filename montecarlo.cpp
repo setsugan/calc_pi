@@ -26,6 +26,8 @@ int main()
     size_t total_points  {};
     size_t inside_points {};
 
+    double pi {};
+
     sf::VertexArray points(sf::Points);
 
     while (window.isOpen())
@@ -50,6 +52,9 @@ int main()
 
             sf::Color color {is_inside ? sf::Color::Green : sf::Color::Red};
             points.append(sf::Vertex(sf::Vector2f(point.x + RADIUS, point.y + RADIUS), color));
+
+            pi = static_cast<double>(inside_points) / static_cast<double>(total_points) * 4.0;
+            std::cout << pi << std::endl;
 
             window.clear(sf::Color::Black);
             window.draw(points);
