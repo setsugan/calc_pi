@@ -1,5 +1,12 @@
 #include <SFML/Graphics.hpp>
+#include <random>
 #include <iostream>
+
+struct Point
+{
+    double x;
+    double y;
+};
 
 int main()
 {
@@ -11,6 +18,12 @@ int main()
     sf::RenderWindow window(sf::VideoMode(WIDTH, HEIGHT), "montecarlo");
     window.setFramerateLimit(60);
 
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::uniform_real_distribution<float> dist(-RADIUS, RADIUS);
+
+    sf::VertexArray points(sf::Points);
+
     while (window.isOpen())
     {
         sf::Event event;
@@ -21,7 +34,13 @@ int main()
                 window.close();
             }
 
+            Point point {dist(gen), dist(gen)};
+
+            sf::Color color {sf::Color::Green};
+            points.append(sf::Vertex(sf::Vector2f(point.x + RADIUS, point.y + RADIUS), color));
+
             window.clear(sf::Color::Black);
+            window.draw(points);
             window.display();
         }
     }
