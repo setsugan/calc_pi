@@ -39,26 +39,26 @@ int main()
             {
                 window.close();
             }
-
-            Point point {dist(gen), dist(gen)};
-            bool is_inside {false};
-
-            if (pow(point.x, 2.0) + pow(point.y, 2.0) <= pow(RADIUS, 2.0))
-            {
-                is_inside = true;
-                ++inside_points;
-            }
-            ++total_points;
-
-            sf::Color color {is_inside ? sf::Color::Green : sf::Color::Red};
-            points.append(sf::Vertex(sf::Vector2f(point.x + RADIUS, point.y + RADIUS), color));
-
-            pi = static_cast<double>(inside_points) / static_cast<double>(total_points) * 4.0;
-            std::cout << pi << std::endl;
-
-            window.clear(sf::Color::Black);
-            window.draw(points);
-            window.display();
         }
+        
+        Point point {dist(gen), dist(gen)};
+        bool is_inside {false};
+
+        if (pow(point.x, 2.0) + pow(point.y, 2.0) <= pow(RADIUS, 2.0))
+        {
+            is_inside = true;
+            ++inside_points;
+        }
+        ++total_points;
+
+        sf::Color color {is_inside ? sf::Color::Green : sf::Color::Red};
+        points.append(sf::Vertex(sf::Vector2f(point.x + RADIUS, point.y + RADIUS), color));
+
+        pi = static_cast<double>(inside_points) / static_cast<double>(total_points) * 4.0;
+        std::cout << pi << std::endl;
+
+        window.clear(sf::Color::Black);
+        window.draw(points);
+        window.display();
     }
 }
