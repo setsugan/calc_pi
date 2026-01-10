@@ -1,0 +1,27 @@
+{
+    "ROS2.distro": "humble",
+    "python.autoComplete.extraPaths": [
+        "/home/rikuyukimaru/kourobo2026b_ros2/install/sn4_msgs/local/lib/python3.10/dist-packages",
+        "/home/rikuyukimaru/kourobo2026b_ros2/install/matplotlibsim_lite/lib/python3.10/site-packages",
+        "/home/rikuyukimaru/kourobo2026b_ros2/install/robocon_msgs/local/lib/python3.10/dist-packages",
+        "/home/rikuyukimaru/natto_library/install/natto_msgs/local/lib/python3.10/dist-packages",
+        "/home/rikuyukimaru/nhk2025b_ros2/install/nhk2025b_monitor/lib/python3.10/site-packages",
+        "/home/rikuyukimaru/nhk2025b_ros2/install/nhk2025b_behavior/lib/python3.10/site-packages",
+        "/home/rikuyukimaru/nhk2025b_ros2/install/nhk2025b_msgs/local/lib/python3.10/dist-packages",
+        "/home/rikuyukimaru/ros2_ws/install/custom_msgs/local/lib/python3.10/dist-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/rikuyukimaru/kourobo2026b_ros2/install/sn4_msgs/local/lib/python3.10/dist-packages",
+        "/home/rikuyukimaru/kourobo2026b_ros2/install/matplotlibsim_lite/lib/python3.10/site-packages",
+        "/home/rikuyukimaru/kourobo2026b_ros2/install/robocon_msgs/local/lib/python3.10/dist-packages",
+        "/home/rikuyukimaru/natto_library/install/natto_msgs/local/lib/python3.10/dist-packages",
+        "/home/rikuyukimaru/nhk2025b_ros2/install/nhk2025b_monitor/lib/python3.10/site-packages",
+        "/home/rikuyukimaru/nhk2025b_ros2/install/nhk2025b_behavior/lib/python3.10/site-packages",
+        "/home/rikuyukimaru/nhk2025b_ros2/install/nhk2025b_msgs/local/lib/python3.10/dist-packages",
+        "/home/rikuyukimaru/ros2_ws/install/custom_msgs/local/lib/python3.10/dist-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ]
+}
