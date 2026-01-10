@@ -17,7 +17,7 @@ int main()
     constexpr double RADIUS { WIDTH / 2.0 };
 
     sf::RenderWindow window(sf::VideoMode(WIDTH, HEIGHT), "montecarlo");
-    window.setFramerateLimit(60);
+    window.setFramerateLimit(500);
 
     std::random_device rd;
     std::mt19937 gen(rd());
@@ -40,7 +40,7 @@ int main()
                 window.close();
             }
         }
-        
+
         Point point {dist(gen), dist(gen)};
         bool is_inside {false};
 
@@ -55,7 +55,10 @@ int main()
         points.append(sf::Vertex(sf::Vector2f(point.x + RADIUS, point.y + RADIUS), color));
 
         pi = static_cast<double>(inside_points) / static_cast<double>(total_points) * 4.0;
-        std::cout << pi << std::endl;
+        if (total_points % 100 == 0)
+        {
+            std::cout << "pi : " << pi << std::endl;
+        }
 
         window.clear(sf::Color::Black);
         window.draw(points);
